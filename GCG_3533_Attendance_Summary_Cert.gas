@@ -1,0 +1,858 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Att_Sum..create
+gui.SS_Att_Sum..caption("Attendance Summary")
+gui.SS_Att_Sum..size(6160,5190)
+gui.SS_Att_Sum..minx(0)
+gui.SS_Att_Sum..miny(0)
+gui.SS_Att_Sum..position(0,0)
+gui.SS_Att_Sum..event(unload,ss_form1_unload)
+gui.SS_Att_Sum..alwaysontop(False)
+gui.SS_Att_Sum..fontname("Arial")
+gui.SS_Att_Sum..fontsize(8)
+gui.SS_Att_Sum..forecolor(0)
+gui.SS_Att_Sum..fontstyle(,,,,)
+gui.SS_Att_Sum..BackColor(-2147483633)
+gui.SS_Att_Sum..controlbox(True)
+gui.SS_Att_Sum..maxbutton(False)
+gui.SS_Att_Sum..minbutton(False)
+gui.SS_Att_Sum..mousepointer(0)
+gui.SS_Att_Sum..moveable(True)
+gui.SS_Att_Sum..sizeable(False)
+gui.SS_Att_Sum..ShowInTaskBar(True)
+gui.SS_Att_Sum..titlebar(True)
+gui.SS_Att_Sum.lbl_dtpStart.create(label,"Start Date",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Att_Sum.lbl_dtpStart.defaultvalue("")
+gui.SS_Att_Sum.lbl_dtpStart.controlgroup(0)
+gui.SS_Att_Sum.dtpStart.create(datepicker)
+gui.SS_Att_Sum.dtpStart.visible(True)
+gui.SS_Att_Sum.dtpStart.size(1800,345)
+gui.SS_Att_Sum.dtpStart.zorder(0)
+gui.SS_Att_Sum.dtpStart.position(100,335)
+gui.SS_Att_Sum.dtpStart.enabled(True)
+gui.SS_Att_Sum.dtpStart.checkbox(False)
+gui.SS_Att_Sum.dtpStart.defaultvalue("")
+gui.SS_Att_Sum.dtpStart.controlgroup(0)
+gui.SS_Att_Sum.lbl_dtpEnd.create(label,"End Date",True,1800,200,1,1985,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Att_Sum.lbl_dtpEnd.defaultvalue("")
+gui.SS_Att_Sum.lbl_dtpEnd.controlgroup(0)
+gui.SS_Att_Sum.dtpEnd.create(datepicker)
+gui.SS_Att_Sum.dtpEnd.visible(True)
+gui.SS_Att_Sum.dtpEnd.size(1800,345)
+gui.SS_Att_Sum.dtpEnd.zorder(0)
+gui.SS_Att_Sum.dtpEnd.position(1985,335)
+gui.SS_Att_Sum.dtpEnd.enabled(True)
+gui.SS_Att_Sum.dtpEnd.checkbox(False)
+gui.SS_Att_Sum.dtpEnd.defaultvalue("")
+gui.SS_Att_Sum.dtpEnd.controlgroup(0)
+gui.SS_Att_Sum.lbl_txtBeg.create(label,"Beginning Department",True,1800,200,1,100,850,True,0,Arial,8,-2147483633,0)
+gui.SS_Att_Sum.lbl_txtBeg.defaultvalue("")
+gui.SS_Att_Sum.lbl_txtBeg.controlgroup(0)
+gui.SS_Att_Sum.txtBeg.create(textbox,"",True,1800,330,0,100,1050,True,0,Arial,8,16777215,1)
+gui.SS_Att_Sum.txtBeg.defaultvalue("")
+gui.SS_Att_Sum.txtBeg.controlgroup(0)
+gui.SS_Att_Sum.cmd_txtBeg.create(button)
+gui.SS_Att_Sum.cmd_txtBeg.caption("^")
+gui.SS_Att_Sum.cmd_txtBeg.visible(True)
+gui.SS_Att_Sum.cmd_txtBeg.size(360,330)
+gui.SS_Att_Sum.cmd_txtBeg.zorder(0)
+gui.SS_Att_Sum.cmd_txtBeg.position(1970,1045)
+gui.SS_Att_Sum.cmd_txtBeg.enabled(True)
+gui.SS_Att_Sum.cmd_txtBeg.fontname("Arial")
+gui.SS_Att_Sum.cmd_txtBeg.fontsize(8)
+gui.SS_Att_Sum.cmd_txtBeg.event(click,cmd_txtbeg_click)
+gui.SS_Att_Sum.cmd_txtBeg.defaultvalue("")
+gui.SS_Att_Sum.cmd_txtBeg.controlgroup(0)
+gui.SS_Att_Sum.lbl_txtEnd.create(label,"Ending Deparment",True,1800,200,1,2455,850,True,0,Arial,8,-2147483633,0)
+gui.SS_Att_Sum.lbl_txtEnd.defaultvalue("")
+gui.SS_Att_Sum.lbl_txtEnd.controlgroup(0)
+gui.SS_Att_Sum.txtEnd.create(textbox,"",True,1800,330,0,2455,1050,True,0,Arial,8,16777215,1)
+gui.SS_Att_Sum.txtEnd.defaultvalue("")
+gui.SS_Att_Sum.txtEnd.controlgroup(0)
+gui.SS_Att_Sum.cmd_txtEnd.create(button)
+gui.SS_Att_Sum.cmd_txtEnd.caption("^")
+gui.SS_Att_Sum.cmd_txtEnd.visible(True)
+gui.SS_Att_Sum.cmd_txtEnd.size(390,330)
+gui.SS_Att_Sum.cmd_txtEnd.zorder(0)
+gui.SS_Att_Sum.cmd_txtEnd.position(4325,1050)
+gui.SS_Att_Sum.cmd_txtEnd.enabled(True)
+gui.SS_Att_Sum.cmd_txtEnd.fontname("Arial")
+gui.SS_Att_Sum.cmd_txtEnd.fontsize(8)
+gui.SS_Att_Sum.cmd_txtEnd.event(click,cmd_txtend_click)
+gui.SS_Att_Sum.cmd_txtEnd.defaultvalue("")
+gui.SS_Att_Sum.cmd_txtEnd.controlgroup(0)
+gui.SS_Att_Sum.chkAll.create(checkbox)
+gui.SS_Att_Sum.chkAll.caption("All Deparments")
+gui.SS_Att_Sum.chkAll.visible(True)
+gui.SS_Att_Sum.chkAll.size(1800,300)
+gui.SS_Att_Sum.chkAll.zorder(0)
+gui.SS_Att_Sum.chkAll.position(100,1385)
+gui.SS_Att_Sum.chkAll.enabled(True)
+gui.SS_Att_Sum.chkAll.alignment(0)
+gui.SS_Att_Sum.chkAll.fontname("Arial")
+gui.SS_Att_Sum.chkAll.fontsize(8)
+gui.SS_Att_Sum.chkAll.event(click,chkall_click)
+gui.SS_Att_Sum.chkAll.defaultvalue("")
+gui.SS_Att_Sum.chkAll.controlgroup(0)
+gui.SS_Att_Sum.lvwDepartment.create(listview)
+gui.SS_Att_Sum.lvwDepartment.view(3)
+gui.SS_Att_Sum.lvwDepartment.addlistviewcolumn("Beginning Department",2705,0)
+gui.SS_Att_Sum.lvwDepartment.addlistviewcolumn("Ending Deparment",2705,0)
+gui.SS_Att_Sum.lvwDepartment.visible(True)
+gui.SS_Att_Sum.lvwDepartment.size(5810,2000)
+gui.SS_Att_Sum.lvwDepartment.zorder(0)
+gui.SS_Att_Sum.lvwDepartment.position(100,1710)
+gui.SS_Att_Sum.lvwDepartment.enabled(True)
+gui.SS_Att_Sum.lvwDepartment.fontname("Arial")
+gui.SS_Att_Sum.lvwDepartment.fontsize(8)
+gui.SS_Att_Sum.cmd_lvw1Add.create(button)
+gui.SS_Att_Sum.cmd_lvw1Add.caption("Add")
+gui.SS_Att_Sum.cmd_lvw1Add.visible(True)
+gui.SS_Att_Sum.cmd_lvw1Add.size(1000,330)
+gui.SS_Att_Sum.cmd_lvw1Add.zorder(0)
+gui.SS_Att_Sum.cmd_lvw1Add.position(4810,1050)
+gui.SS_Att_Sum.cmd_lvw1Add.enabled(True)
+gui.SS_Att_Sum.cmd_lvw1Add.fontname("Arial")
+gui.SS_Att_Sum.cmd_lvw1Add.fontsize(8)
+gui.SS_Att_Sum.cmd_lvw1Add.event(click,cmd_lvw1add_click)
+gui.SS_Att_Sum.cmd_lvw1Add.SetInternationalID(7600)
+gui.SS_Att_Sum.cmd_lvw1Add.defaultvalue("")
+gui.SS_Att_Sum.cmd_lvw1Add.controlgroup(0)
+gui.SS_Att_Sum.cmd_lvw1Delete.create(button)
+gui.SS_Att_Sum.cmd_lvw1Delete.caption("Delete")
+gui.SS_Att_Sum.cmd_lvw1Delete.visible(True)
+gui.SS_Att_Sum.cmd_lvw1Delete.size(1000,330)
+gui.SS_Att_Sum.cmd_lvw1Delete.zorder(0)
+gui.SS_Att_Sum.cmd_lvw1Delete.position(100,3750)
+gui.SS_Att_Sum.cmd_lvw1Delete.enabled(True)
+gui.SS_Att_Sum.cmd_lvw1Delete.fontname("Arial")
+gui.SS_Att_Sum.cmd_lvw1Delete.fontsize(8)
+gui.SS_Att_Sum.cmd_lvw1Delete.event(click,cmd_lvw1delete_click)
+gui.SS_Att_Sum.cmd_lvw1Delete.SetInternationalID(171500)
+gui.SS_Att_Sum.cmd_lvw1Delete.defaultvalue("")
+gui.SS_Att_Sum.cmd_lvw1Delete.controlgroup(0)
+gui.SS_Att_Sum.cmd_lvw1Clear.create(button)
+gui.SS_Att_Sum.cmd_lvw1Clear.caption("Clear")
+gui.SS_Att_Sum.cmd_lvw1Clear.visible(True)
+gui.SS_Att_Sum.cmd_lvw1Clear.size(1000,330)
+gui.SS_Att_Sum.cmd_lvw1Clear.zorder(0)
+gui.SS_Att_Sum.cmd_lvw1Clear.position(1185,3750)
+gui.SS_Att_Sum.cmd_lvw1Clear.enabled(True)
+gui.SS_Att_Sum.cmd_lvw1Clear.fontname("Arial")
+gui.SS_Att_Sum.cmd_lvw1Clear.fontsize(8)
+gui.SS_Att_Sum.cmd_lvw1Clear.event(click,cmd_lvw1clear_click)
+gui.SS_Att_Sum.cmd_lvw1Clear.SetInternationalID(106700)
+gui.SS_Att_Sum.cmd_lvw1Clear.defaultvalue("")
+gui.SS_Att_Sum.cmd_lvw1Clear.controlgroup(0)
+gui.SS_Att_Sum.cmdPrint.create(button)
+gui.SS_Att_Sum.cmdPrint.caption("Print")
+gui.SS_Att_Sum.cmdPrint.visible(True)
+gui.SS_Att_Sum.cmdPrint.size(1000,360)
+gui.SS_Att_Sum.cmdPrint.zorder(0)
+gui.SS_Att_Sum.cmdPrint.position(100,4145)
+gui.SS_Att_Sum.cmdPrint.enabled(True)
+gui.SS_Att_Sum.cmdPrint.fontname("Arial")
+gui.SS_Att_Sum.cmdPrint.fontsize(8)
+gui.SS_Att_Sum.cmdPrint.event(click,cmdprint_click)
+gui.SS_Att_Sum.cmdPrint.defaultvalue("")
+gui.SS_Att_Sum.cmdPrint.controlgroup(0)
+gui.SS_Att_Sum.dtpStart.tabstop(True)
+gui.SS_Att_Sum.dtpStart.tabindex(1)
+gui.SS_Att_Sum.dtpEnd.tabstop(True)
+gui.SS_Att_Sum.dtpEnd.tabindex(2)
+gui.SS_Att_Sum.txtBeg.tabstop(True)
+gui.SS_Att_Sum.txtBeg.tabindex(3)
+gui.SS_Att_Sum.cmd_txtBeg.tabstop(True)
+gui.SS_Att_Sum.cmd_txtBeg.tabindex(4)
+gui.SS_Att_Sum.txtEnd.tabstop(True)
+gui.SS_Att_Sum.txtEnd.tabindex(5)
+gui.SS_Att_Sum.cmd_txtEnd.tabstop(True)
+gui.SS_Att_Sum.cmd_txtEnd.tabindex(6)
+gui.SS_Att_Sum.cmd_lvw1Add.tabstop(True)
+gui.SS_Att_Sum.cmd_lvw1Add.tabindex(7)
+gui.SS_Att_Sum.cmd_lvw1Delete.tabstop(True)
+gui.SS_Att_Sum.cmd_lvw1Delete.tabindex(8)
+gui.SS_Att_Sum.cmd_lvw1Clear.tabstop(True)
+gui.SS_Att_Sum.cmd_lvw1Clear.tabindex(9)
+gui.SS_Att_Sum.cmdPrint.tabstop(True)
+gui.SS_Att_Sum.cmdPrint.tabindex(10)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.iKey.Declare(Long,0)
+Variable.UDT.uEmp.Define("Employee_ID",String,EMPLOYEE)
+Variable.UDT.uEmp.Define("Employee_Name",String,NAME)
+Variable.UDT.uEmp.Define("Department",String,DEPT_EMPLOYEE)
+Variable.uGlobal.uEmp.Declare("uEmp")
+Variable.UDT.uAttendance.Define("BIRUNID",Long)
+Variable.UDT.uAttendance.Define("Employee_ID",String,Employee_ID)
+Variable.UDT.uAttendance.Define("Employee_Name",String,Employee_Name)
+Variable.UDT.uAttendance.Define("Department",String,Department)
+Variable.UDT.uAttendance.Define("Hours_Prod",Float,Hours_Prod)
+Variable.UDT.uAttendance.Define("Hours_Non_Prod",Float,Hours_Non_Prod)
+Variable.UDT.uAttendance.Define("Hours_Reg",Float,Hours_Reg)
+Variable.UDT.uAttendance.Define("Hours_OT",Float,Hours_OT)
+Variable.UDT.uAttendance.Define("Hours_TA",Float,Hours_TA)
+Variable.UDT.uAttendance.Define("Hours_Jobs",Float,Hours_Jobs)
+Variable.UDT.uAttendance.Define("Dollars_Pay",Float,Dollars_Pay)
+Variable.UDT.uAttendance.Define("Dollars_Non_Prod",Float,Dollars_Non_Prod)
+Variable.UDT.uAttendance.Define("Dollars_Prod",Float,Dollars_Prod)
+Variable.uGlobal.uAttendance.Declare("uAttendance")
+Variable.Global.iBIRUNID.Declare(Long,0)
+Variable.Global.iLogID.Declare(Long,0)
+Variable.Global.sTitles.Declare(String)
+Variable.Global.sSQL.Declare(String)
+Variable.Global.sRet.Declare(String)
+Variable.Global.iWidths.Declare(Long,0)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,3500)
+Gui.SS_Att_Sum..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.cmd_txtbeg_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtbeg_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Global.sSQL.Set("Select DEPT_ID, DEPT_NAME from V_DEPARTMENTS order by DEPT_ID")
+
+F.Intrinsic.String.Split("ID*!*Department","*!*",V.Global.sTitles)
+F.Intrinsic.String.Split("1500*!*5200","*!*",V.Global.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Selet Department","con",V.Global.sSQL,V.Global.sTitles,V.Global.iWidths,5000,8000,V.Global.sRet)
+F.Intrinsic.Control.If(V.Global.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+	Gui.SS_Att_Sum.txtBeg.Text(V.Global.sRet.Trim)
+	F.Intrinsic.Control.If(V.Screen.SS_Att_Sum!txtEnd.Text,=,"")
+		Gui.SS_Att_Sum.txtEnd.Text(V.Global.sRet.Trim)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtbeg_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtbeg_click.end
+
+program.sub.cmd_txtend_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtend_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Global.sSQL.Set("Select DEPT_ID, DEPT_NAME from V_DEPARTMENTS order by DEPT_ID")
+
+F.Intrinsic.String.Split("ID*!*Department","*!*",V.Global.sTitles)
+F.Intrinsic.String.Split("1500*!*5200","*!*",V.Global.iWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Selet Department","con",V.Global.sSQL,V.Global.sTitles,V.Global.iWidths,5000,8000,V.Global.sRet)
+F.Intrinsic.Control.If(V.Global.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+	Gui.SS_Att_Sum.txtEnd.Text(V.Global.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtend_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtend_click.end
+
+program.sub.cmd_lvw1add_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1add_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sBeg.Declare(String)
+V.Local.sEnd.Declare(String)
+
+V.Local.sBeg.Set(V.Screen.SS_Att_Sum!txtBeg.Text)
+V.Local.sEnd.Set(V.Screen.SS_Att_Sum!txtEnd.Text)
+
+F.Intrinsic.Control.If(V.Local.sBeg.Trim,<>,"","AND",V.Local.sEnd.Trim,<>,"")
+	F.Intrinsic.Math.Add(V.Global.iKey,1,V.Global.iKey)
+	Gui.SS_Att_Sum.lvwDepartment.AddListItem(V.Global.iKey,V.Screen.SS_Att_Sum!txtBeg.Text)
+	Gui.SS_Att_Sum.lvwDepartment.SetListItemSubItemText(V.Global.iKey,1,V.Screen.SS_Att_Sum!txtEnd.Text)
+	Gui.SS_Att_Sum.txtBeg.Text("")
+	Gui.SS_Att_Sum.txtEnd.Text("")
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("You must select a Beginning and End Department.")
+	Gui.SS_Att_Sum.txtBeg.Text("")
+	Gui.SS_Att_Sum.txtEnd.Text("")
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1add_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvw1add_click.end
+
+program.sub.cmd_lvw1delete_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1delete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iKey.Declare(Long)
+V.Local.iOrd.Declare(Long)
+
+V.Local.iKey.Set(V.Screen.SS_Att_Sum!lvwDepartment.SelectedItemKey)
+Gui.SS_Att_Sum.lvwDepartment.RemoveItem(V.Local.iKey)
+Gui.SS_Att_Sum.txtBeg.SetFocus
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1delete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvw1delete_click.end
+
+program.sub.cmd_lvw1clear_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw1clear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Att_Sum.lvwDepartment.ClearItems
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw1clear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_lvw1clear_click.end
+
+program.sub.cmdprint_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i.Declare(Long)
+V.Local.dStart.Declare(Date)
+V.Local.dStop.Declare(Date)
+V.Local.iUB.Declare(Long)
+V.Local.iHours.Declare(Long)
+V.Local.iMinutes.Declare(Long)
+V.Local.sKeys.Declare(String)
+V.Local.iReportID.Declare(Long)
+
+Gui.SS_Att_Sum.lvwDepartment.RetrieveAllListItems(V.Local.sKeys)
+
+F.Intrinsic.Control.If(V.Local.sKeys(0).Trim,<>,"***NORETURN***","or",V.Screen.SS_Att_Sum!chkAll.Value,=,1)
+
+	Gui.SS_Att_Sum..Visible(False)
+	F.Intrinsic.UI.InvokeWaitDialog("Please wait while the report is generated.","Generate Report")
+	F.Intrinsic.Control.CallSub(Searchlist)
+	V.uGlobal.uAttendance.Redim(-1,-1)
+
+	F.Global.BI.GetRunID(V.Global.iBIRUNID)
+	F.Global.BI.StartLogging(V.Global.iBIRUNID,-1,-1,"",V.Global.iLogID)
+
+	F.Intrinsic.Control.If(V.uGlobal.uEmp.UBound,>,-1)
+		V.Local.dStart.Set(V.Screen.SS_Att_Sum!dtpStart.Value)
+		V.Local.dStop.Set(V.Screen.SS_Att_Sum!dtpEnd.Value)
+
+		F.Intrinsic.Control.For(V.Local.i,V.uGlobal.uEmp.LBound,V.uGlobal.uEmp.UBound,1)
+			V.Local.iHours.Set(0)
+			V.Local.iMinutes.Set(0)
+			'Selecting time and attendance records so that the hours can been summed
+			F.Intrinsic.String.Build("Select EMPLOYEE, HOURS_HH, HOURS_MM, concat(REC_TYPE,EXCUSED) as Exclusion from V_TIME_ATTENDANCE where EMPLOYEE = '{0}' and DATE_IN between  '{1}' and '{2}'  and Exclusion <> 'AY' ORDER BY EMPLOYEE, DATE_IN,TIME_IN",V.uGlobal.uEmp(V.Local.i)!Employee_ID,V.Local.dStart.PervasiveDate,V.Local.dStop.PervasiveDate,V.Global.sSQL)
+			F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Global.sSQL)
+
+			F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+				'No time and attendance records found for employee so loading with zeros
+				F.Intrinsic.Control.If(V.uGlobal.uAttendance.UBound,=,-1)
+					V.uGlobal.uAttendance.Redim(0,0)
+					V.uGlobal.uAttendance!Employee_ID.Set(V.uGlobal.uEmp(V.Local.i)!Employee_ID)
+					V.uGlobal.uAttendance!Employee_Name.Set(V.uGlobal.uEmp(V.Local.i)!Employee_Name)
+					V.uGlobal.uAttendance!Department.Set(V.uGlobal.uEmp(V.Local.i)!Department)
+					V.uGlobal.uAttendance!Hours_TA.Set(0)
+					V.uGlobal.uAttendance!Hours_Prod.Set(0)
+					V.uGlobal.uAttendance!Hours_Non_Prod.Set(0)
+					V.uGlobal.uAttendance!Hours_Reg.Set(0)
+					V.uGlobal.uAttendance!Hours_OT.Set(0)
+					V.uGlobal.uAttendance!Hours_Jobs.Set(0)
+					V.uGlobal.uAttendance!Dollars_Pay.Set(0)
+					V.uGlobal.uAttendance!Dollars_Prod.Set(0)
+					V.uGlobal.uAttendance!Dollars_Non_Prod.Set(0)
+				F.Intrinsic.Control.Else
+					V.Local.iUB.Set(V.uGlobal.uAttendance.UBound)
+					F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+					V.uGlobal.uAttendance.RedimPreserve(0,V.Local.iUB)
+					V.uGlobal.uAttendance(V.Local.iUB)!Employee_ID.Set(V.uGlobal.uEmp(V.Local.i)!Employee_ID)
+					V.uGlobal.uAttendance(V.Local.iUB)!Employee_Name.Set(V.uGlobal.uEmp(V.Local.i)!Employee_Name)
+					V.uGlobal.uAttendance(V.Local.iUB)!Department.Set(V.uGlobal.uEmp(V.Local.i)!Department)
+					V.uGlobal.uAttendance(V.Local.iUB)!Hours_TA.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Hours_Prod.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Hours_Non_Prod.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Hours_Reg.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Hours_OT.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Hours_Jobs.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Pay.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Prod.Set(0)
+					V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Non_Prod.Set(0)
+				F.Intrinsic.Control.EndIf
+
+				F.ODBC.con!rst.Close
+			F.Intrinsic.Control.Else
+
+				'Records found for employee for date range so totaling hours from time attendance for date range
+				F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+					F.Intrinsic.Math.Add(V.ODBC.con!rst.FieldValLong!HOURS_HH,V.Local.iHours,V.Local.iHours)
+					F.Intrinsic.Math.Add(V.ODBC.con!rst.FieldValLong!HOURS_MM,V.Local.iMinutes,V.Local.iMinutes)
+					F.Intrinsic.Control.If(V.Local.iMinutes,>=,60)
+						F.Intrinsic.Math.Add(V.Local.iHours,1,V.Local.iHours)
+						F.Intrinsic.Math.Sub(V.Local.iMinutes,60,V.Local.iMinutes)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.con!rst.MoveNext
+				F.Intrinsic.Control.Loop
+
+				F.ODBC.con!rst.Close
+
+				'Formatting hours from time and attendance
+				F.Intrinsic.Control.If(V.Local.iMinutes,>,0)
+					F.Intrinsic.Math.Div(V.Local.iMinutes,60,V.Local.iMinutes)
+					F.Intrinsic.Math.Add(V.Local.iHours,V.Local.iMinutes,V.Local.iMinutes)
+					F.Intrinsic.Math.Round(V.Local.iHours,4,V.Local.iHours)
+				F.Intrinsic.Control.EndIf
+
+				'Opening job detail to get hours worked on jobs
+				F.Intrinsic.String.Build("Select HOURS_WORKED, AMOUNT_LABOR, FLAG_INDIRECT, RATE_TYPE  From V_JOB_DETAIL where EMPL = '{0}' and LMO = 'L' and EDITED_WO_DTL <> 'R' and DATE_SEQUENCE between '{1}' and '{2}' ",V.uGlobal.uEmp(V.Local.i)!Employee_ID,V.Local.dStart.PervasiveDate,V.Local.dStop.PervasiveDate,V.Global.sSQL)
+				F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Global.sSQL)
+
+				F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+
+					'No job detail records
+					F.Intrinsic.Control.If(V.uGlobal.uAttendance.UBound,=,-1)
+						V.uGlobal.uAttendance.Redim(0,0)
+						V.uGlobal.uAttendance!Employee_ID.Set(V.uGlobal.uEmp(V.Local.i)!Employee_ID)
+						V.uGlobal.uAttendance!Employee_Name.Set(V.uGlobal.uEmp(V.Local.i)!Employee_Name)
+						V.uGlobal.uAttendance!Department.Set(V.uGlobal.uEmp(V.Local.i)!Department)
+						V.uGlobal.uAttendance!Hours_TA.Set(V.Local.iHours)
+						V.uGlobal.uAttendance!Hours_Prod.Set(0)
+						V.uGlobal.uAttendance!Hours_Non_Prod.Set(V.Local.iHours)
+						V.uGlobal.uAttendance!Hours_Reg.Set(V.Local.iHours)
+						V.uGlobal.uAttendance!Hours_OT.Set(V.Local.iHours)
+						V.uGlobal.uAttendance!Hours_Jobs.Set(0)
+						V.uGlobal.uAttendance!Dollars_Pay.Set(0)
+						V.uGlobal.uAttendance!Dollars_Prod.Set(0)
+						V.uGlobal.uAttendance!Dollars_Non_Prod.Set(0)
+					F.Intrinsic.Control.Else
+						V.Local.iUB.Set(V.uGlobal.uAttendance.UBound)
+						F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+						V.uGlobal.uAttendance.RedimPreserve(0,V.Local.iUB)
+						V.uGlobal.uAttendance(V.Local.iUB)!Employee_ID.Set(V.uGlobal.uEmp(V.Local.i)!Employee_ID)
+						V.uGlobal.uAttendance(V.Local.iUB)!Employee_Name.Set(V.uGlobal.uEmp(V.Local.i)!Employee_Name)
+						V.uGlobal.uAttendance(V.Local.iUB)!Department.Set(V.uGlobal.uEmp(V.Local.i)!Department)
+						V.uGlobal.uAttendance(V.Local.iUB)!Hours_TA.Set(V.Local.iHours)
+						V.uGlobal.uAttendance(V.Local.iUB)!Hours_Prod.Set(0)
+						V.uGlobal.uAttendance(V.Local.iUB)!Hours_Non_Prod.Set(V.Local.iHours)
+						V.uGlobal.uAttendance(V.Local.iUB)!Hours_Reg.Set(V.Local.iHours)
+						V.uGlobal.uAttendance(V.Local.iUB)!Hours_OT.Set(V.Local.iHours)
+						V.uGlobal.uAttendance(V.Local.iUB)!Hours_Jobs.Set(0)
+						V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Pay.Set(0)
+						V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Prod.Set(0)
+						V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Non_Prod.Set(0)
+					F.Intrinsic.Control.EndIf
+
+					F.ODBC.con!rst.Close
+				F.Intrinsic.Control.Else
+
+					'Records found from Job Detail, looping through the records and totalling hours
+					F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+
+						F.Intrinsic.Control.If(V.uGlobal.uAttendance.UBound,=,-1)
+							V.uGlobal.uAttendance.Redim(0,0)
+							V.uGlobal.uAttendance!Employee_ID.Set(V.uGlobal.uEmp(V.Local.i)!Employee_ID)
+							V.uGlobal.uAttendance!Employee_Name.Set(V.uGlobal.uEmp(V.Local.i)!Employee_Name)
+							V.uGlobal.uAttendance!Department.Set(V.uGlobal.uEmp(V.Local.i)!Department)
+							V.uGlobal.uAttendance!Hours_TA.Set(V.Local.iHours)
+
+							'If Indirect totalling indirect hours
+							F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!FLAG_INDIRECT,=,"I")
+								V.uGlobal.uAttendance!Hours_Non_Prod.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+								V.uGlobal.uAttendance!Hours_Prod.Set(0)
+								V.uGlobal.uAttendance!Hours_Jobs.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+								V.uGlobal.uAttendance!Dollars_Prod.Set(0)
+								V.uGlobal.uAttendance!Dollars_Pay.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+								V.uGlobal.uAttendance!Dollars_Non_Prod.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+
+								F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!RATE_TYPE,=,"R")
+									V.uGlobal.uAttendance!Hours_Reg.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									V.uGlobal.uAttendance!Hours_OT.Set(0)
+								F.Intrinsic.Control.Else
+									V.uGlobal.uAttendance!Hours_Reg.Set(0)
+									V.uGlobal.uAttendance!Hours_OT.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+								F.Intrinsic.Control.EndIf
+
+							F.Intrinsic.Control.Else
+								V.uGlobal.uAttendance!Hours_Non_Prod.Set(0)
+								V.uGlobal.uAttendance!Hours_Prod.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+								V.uGlobal.uAttendance!Hours_Jobs.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+								V.uGlobal.uAttendance!Dollars_Pay.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+								V.uGlobal.uAttendance!Dollars_Prod.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+								V.uGlobal.uAttendance!Dollars_Non_Prod.Set(0)
+
+								'totalling hours for direct hours
+								F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!RATE_TYPE,=,"R")
+									V.uGlobal.uAttendance!Hours_Reg.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									V.uGlobal.uAttendance!Hours_OT.Set(0)
+								F.Intrinsic.Control.Else
+									V.uGlobal.uAttendance!Hours_Reg.Set(0)
+									V.uGlobal.uAttendance!Hours_OT.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+								F.Intrinsic.Control.EndIf
+
+							F.Intrinsic.Control.EndIf
+
+						F.Intrinsic.Control.Else
+							'Checking to see if employee is already in UDT
+							F.Intrinsic.Variable.UDTSeek(V.uGlobal.uAttendance!Employee_ID,V.uGlobal.uEmp(V.Local.i)!Employee_ID,0,V.Global.sRet)
+
+							F.Intrinsic.Control.If(V.Global.sRet,=,"")
+								'Employee does not exist in UDT so adding
+								V.Local.iUB.Set(V.uGlobal.uAttendance.UBound)
+								F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+								V.uGlobal.uAttendance.RedimPreserve(0,V.Local.iUB)
+								V.uGlobal.uAttendance(V.Local.iUB)!Employee_ID.Set(V.uGlobal.uEmp(V.Local.i)!Employee_ID)
+								V.uGlobal.uAttendance(V.Local.iUB)!Employee_Name.Set(V.uGlobal.uEmp(V.Local.i)!Employee_Name)
+								V.uGlobal.uAttendance(V.Local.iUB)!Department.Set(V.uGlobal.uEmp(V.Local.i)!Department)
+								V.uGlobal.uAttendance(V.Local.iUB)!Hours_TA.Set(V.Local.iHours)
+
+								'If Indirect totalling indirect hours
+								F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!FLAG_INDIRECT,=,"I")
+									V.uGlobal.uAttendance(V.Local.iUB)!Hours_Non_Prod.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									V.uGlobal.uAttendance(V.Local.iUB)!Hours_Prod.Set(0)
+									V.uGlobal.uAttendance(V.Local.iUB)!Hours_Jobs.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Pay.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+									V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Prod.Set(0)
+									V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Non_Prod.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+
+									F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!RATE_TYPE,=,"R")
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_Reg.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_OT.Set(0)
+									F.Intrinsic.Control.Else
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_Reg.Set(0)
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_OT.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									F.Intrinsic.Control.EndIf
+
+								F.Intrinsic.Control.Else
+									V.uGlobal.uAttendance(V.Local.iUB)!Hours_Non_Prod.Set(0)
+									V.uGlobal.uAttendance(V.Local.iUB)!Hours_Prod.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									V.uGlobal.uAttendance(V.Local.iUB)!Hours_Jobs.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Pay.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+									V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Prod.Set(V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR)
+									V.uGlobal.uAttendance(V.Local.iUB)!Dollars_Non_Prod.Set(0)
+
+									'totalling hours for direct hours
+									F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!RATE_TYPE,=,"R")
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_Reg.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_OT.Set(0)
+									F.Intrinsic.Control.Else
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_Reg.Set(0)
+										V.uGlobal.uAttendance(V.Local.iUB)!Hours_OT.Set(V.ODBC.con!rst.FieldValFloat!HOURS_WORKED)
+									F.Intrinsic.Control.EndIf
+
+								F.Intrinsic.Control.EndIf
+
+							F.Intrinsic.Control.Else
+								'Employee already in UDT
+								F.Intrinsic.String.Split(V.Global.sRet,"*!*",V.Global.sRet)
+
+								'If Indirect totalling indirect hours
+								F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!FLAG_INDIRECT,=,"I")
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Non_Prod,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Non_Prod)
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Jobs,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Jobs)
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Pay,V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR,V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Pay)
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Non_Prod,V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR,V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Non_Prod)
+
+									F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!RATE_TYPE,=,"R")
+										F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Reg,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Reg)
+									F.Intrinsic.Control.Else
+										F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_OT,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_OT)
+									F.Intrinsic.Control.EndIf
+
+								F.Intrinsic.Control.Else
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Prod,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Prod)
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Jobs,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Jobs)
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Pay,V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR,V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Pay)
+									F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Prod,V.ODBC.con!rst.FieldValFloat!AMOUNT_LABOR,V.uGlobal.uAttendance(V.Global.sRet.Long)!Dollars_Prod)
+
+									'totalling hours for direct hours
+									F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValTrim!RATE_TYPE,=,"R")
+										F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Reg,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_Reg)
+									F.Intrinsic.Control.Else
+										F.Intrinsic.Math.Add(V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_OT,V.ODBC.con!rst.FieldValFloat!HOURS_WORKED,V.uGlobal.uAttendance(V.Global.sRet.Long)!Hours_OT)
+									F.Intrinsic.Control.EndIf
+
+								F.Intrinsic.Control.EndIf
+
+							F.Intrinsic.Control.EndIf
+
+						F.Intrinsic.Control.EndIf
+
+						F.ODBC.con!rst.MoveNext
+					F.Intrinsic.Control.Loop
+
+					F.ODBC.con!rst.Close
+
+				F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.i)
+
+		F.Intrinsic.Control.If(V.uGlobal.uAttendance.UBound,<>,-1)
+			V.Global.sSQL.Set("Select * from GCG_3533_Att_Sum")
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uAttendance!BIRUNID,"BIRUNID")
+			F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uAttendance!BIRUNID,V.Global.iBIRUNID)
+			F.ODBC.Connection!con.OpenLocalRecordsetRW("rst",V.Global.sSQL)
+			F.Intrinsic.Variable.SaveUDTToRecordset("con","rst","Variable.uGlobal.uAttendance")
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CallSub(Callbi)
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("You must select at least one range of Departments.")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdprint_click.end
+
+program.sub.ss_form1_unload.start
+F.Intrinsic.Control.SetErrorHandler("ss_form1_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ss_form1_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.ss_form1_unload.end
+
+program.sub.chkall_click.start
+F.Intrinsic.Control.SetErrorHandler("chkall_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Att_Sum!chkAll.Value,=,1)
+	Gui.SS_Att_Sum.txtBeg.Enabled(False)
+	Gui.SS_Att_Sum.txtEnd.Enabled(False)
+	Gui.SS_Att_Sum.txtBeg.Text("")
+	Gui.SS_Att_Sum.txtEnd.Text("")
+	Gui.SS_Att_Sum.cmd_txtBeg.Enabled(False)
+	Gui.SS_Att_Sum.cmd_txtEnd.Enabled(False)
+	Gui.SS_Att_Sum.cmd_lvw1Add.Enabled(False)
+	Gui.SS_Att_Sum.cmd_lvw1Clear.Enabled(False)
+	Gui.SS_Att_Sum.cmd_lvw1Delete.Enabled(False)
+	Gui.SS_Att_Sum.lvwDepartment.Enabled(False)
+	Gui.SS_Att_Sum.lvwDepartment.ClearItems
+F.Intrinsic.Control.Else
+	Gui.SS_Att_Sum.txtBeg.Enabled(True)
+	Gui.SS_Att_Sum.txtEnd.Enabled(True)
+	Gui.SS_Att_Sum.cmd_txtBeg.Enabled(True)
+	Gui.SS_Att_Sum.cmd_txtEnd.Enabled(True)
+	Gui.SS_Att_Sum.cmd_lvw1Add.Enabled(True)
+	Gui.SS_Att_Sum.cmd_lvw1Clear.Enabled(True)
+	Gui.SS_Att_Sum.cmd_lvw1Delete.Enabled(True)
+	Gui.SS_Att_Sum.lvwDepartment.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkall_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkall_click.end
+
+Program.Sub.SearchList.Start
+F.Intrinsic.Control.SetErrorHandler("SearchList_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sList.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.iOrd.Declare(Long)
+V.Local.iUB.Declare(Long)
+
+V.uGlobal.uEmp.Redim(-1,-1)
+
+F.Intrinsic.Control.If(V.Screen.SS_Att_Sum!chkAll.Value,=,1)
+	V.Global.sSQL.Set("Select EMPLOYEE, NAME, DEPT_EMPLOYEE from V_EMPLOYEE_MSTR")
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Global.sSQL)
+
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,<>,True)
+		V.uGlobal.uEmp.Redim(0,0)
+		F.Intrinsic.Variable.LoadUDTFromRecordset("con","rst","uGlobal.uEmp",False)
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.Else
+	Gui.SS_Att_Sum.lvwDepartment.RetrieveAllListItems(V.Local.sList)
+	F.Intrinsic.String.Split(V.Local.sList,"*!*",V.Local.sList)
+
+	F.Intrinsic.Control.For(V.Local.i,V.Local.sList.LBound,V.Local.sList.UBound,1)
+		Gui.SS_Att_Sum.lvwDepartment.ListitemKeyToOrdinal(V.Local.sList(V.Local.i),V.Local.iOrd)
+		V.Local.sValues.Set(V.Screen.SS_Att_Sum!lvwDepartment.ListItemTextExtended(V.Local.iOrd))
+		F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+		V.Local.sValues.RedimPreserve(0,1)
+		F.Intrinsic.String.SortAsc(V.Local.sValues,V.Local.sValues)
+		F.Intrinsic.String.Build("Select EMPLOYEE, NAME, DEPT_EMPLOYEE  from V_EMPLOYEE_MSTR where DEPT_EMPLOYEE BETWEEN '{0}' AND '{1}'",V.Local.sValues(0),V.Local.sValues(1),V.Global.sSQL)
+		F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Global.sSQL)
+
+		F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,<>,True)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("con","rst","V.uGlobal.uEmp",True)
+		F.Intrinsic.Control.EndIf
+
+		F.ODBC.con!rst.Close
+	F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SearchList_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SearchList.End
+
+Program.Sub.CallBI.Start
+F.Intrinsic.Control.SetErrorHandler("CallBI_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sParam.Declare(String)
+V.Local.sParamVal.Declare(String)
+V.Local.sStartDate.Declare(String)
+V.Local.sEndDate.Declare(String)
+V.Local.iRet.Declare(String)
+
+V.Local.sParam.Set("StartDate*!*EndDate")
+
+V.Local.sStartDate.Set(V.Screen.SS_Att_Sum!dtpStart.Value)
+F.Intrinsic.String.Format(V.Local.sStartDate,"mm/dd/yyyy",V.Local.sStartDate)
+V.Local.sEndDate.Set(V.Screen.SS_Att_Sum!dtpEnd.Value)
+F.Intrinsic.String.Format(V.Local.sEndDate,"mm/dd/yyyy",V.Local.sEndDate)
+
+F.Global.BI.StopLogging(V.Global.iLogID)
+F.Intrinsic.String.Build("{0}*!*{1}",V.Local.sStartDate,V.Local.sEndDate,V.Local.sParamVal)
+F.Global.BI.RunReportPreProcessor(V.Global.iBIRUNID,V.Global.iLogID,V.Local.sParam,V.Local.sParamVal,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+
+F.Intrinsic.Control.CallSub(Ss_form1_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CallBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3533_Attendance_Summary_Cert.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CallBI.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_Attendance_Summary_Cert$}$ERIC$}$10/6/2015
+${$2$}$$}$$}$2$}$4$}$GCG_3533_Att_Sum$}$1/13/2016 4:37:03 PM$}$CREATE TABLE "GCG_3533_ATT_SUM"(
+ "BIRUNID" BIGINT,
+ "EMPLOYEE_ID" VARCHAR(5),
+ "EMPLOYEE_NAME" VARCHAR(30),
+ "DEPARTMENT" VARCHAR(4),
+ "HOURS_PROD" DOUBLE,
+ "HOURS_NON_PROD" DOUBLE,
+ "HOURS_REG" DOUBLE,
+ "HOURS_OT" DOUBLE,
+ "HOURS_TA" DOUBLE,
+ "HOURS_JOBS" DOUBLE,
+ "DOLLARS_PAY" DOUBLE,
+ "DOLLARS_NON_PROD" DOUBLE,
+ "DOLLARS_PROD" DOUBLE);
+${$2$}$$}$$}$1$}$4$}$Custom Menu Item$}$10/23/2015 3:25:13 PM$}$Project Management -> Reports -> Attendance Summary
+${$2$}$$}$$}$0$}$1$}$GCG_Attendance_Summary_Cert.rpt$}$10/6/2015 3:18:14 PM$}$This program utilizes this report. It has been updated as a PreProcessor.
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Report to show time and attendance and job detail summary information.
+${$4$}$0$}$$}$0$}$-1$}$BCC$}$10/6/2015 3:26:12 PM$}$GS Certified. Updated code. Added Error Handling. Sped code up. Removed Customer Specific Code.
+Program.Sub.Comments.End
+
